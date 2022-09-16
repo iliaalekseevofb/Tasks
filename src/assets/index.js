@@ -1,0 +1,1 @@
+export {default as profileSample} from './profileSample.jpg';
