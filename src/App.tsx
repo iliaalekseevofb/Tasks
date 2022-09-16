@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar, Sidebar } from "./components";
+import { Dashboard, Collection, Collections, Account, Landing, SignIn, SignUp } from './pages';
 
 export interface collection {
   id: number, 
@@ -17,7 +19,7 @@ const sampleCollections: collection[] = [
   {
     id: 1, 
     name: 'Finance', 
-    link: '/finance', 
+    link: 'finance', 
     color: '#cf8cca',
     tasks: [
       {
@@ -30,7 +32,7 @@ const sampleCollections: collection[] = [
   {
     id: 2, 
     name: 'University', 
-    link: '/university', 
+    link: 'university', 
     color: '#6ebac4',
     tasks: [
       {
@@ -48,7 +50,7 @@ const sampleCollections: collection[] = [
   {
     id: 3, 
     name: 'Work', 
-    link: '/work', 
+    link: 'work', 
     color: '#845fa3',
     tasks: [
       {
@@ -64,9 +66,20 @@ const App = () => {
   const[collections, setCollections] = useState<collection[]>(sampleCollections);
 
   return (
-    <div className="w-full h-full">
-      <Navbar />
-      <Sidebar collections={collections} />
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Sidebar collections={collections} />
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/collections" element={<Collections />} />
+          <Route path="/collection-:name" element={<Collection />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/landing" element={<Landing />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

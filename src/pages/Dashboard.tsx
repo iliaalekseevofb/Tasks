@@ -1,6 +1,6 @@
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className="relative top-14 left-64">Dashboard</div>
   )
 }
 
