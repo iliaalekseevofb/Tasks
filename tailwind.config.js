@@ -14,8 +14,10 @@ module.exports = {
         standard: '0.75rem'
       },
       spacing: {
-        'navItem': '2rem',
-        'iconSize': '1.5rem'
+        'navItemDesktop': '2rem',
+        'navItemMobile': '2.5rem',
+        'iconSizeDesktop': '1.5rem',
+        'iconSizeMobile': '2rem'
       }
     },
   },
