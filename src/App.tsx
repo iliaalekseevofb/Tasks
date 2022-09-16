@@ -18,7 +18,7 @@ const sampleCollections: collection[] = [
     id: 1, 
     name: 'Finance', 
     link: '/finance', 
-    color: '#5ce66a',
+    color: '#cf8cca',
     tasks: [
       {
         id: 1,
@@ -31,7 +31,7 @@ const sampleCollections: collection[] = [
     id: 2, 
     name: 'University', 
     link: '/university', 
-    color: '#f7e648',
+    color: '#6ebac4',
     tasks: [
       {
         id: 1,
@@ -49,7 +49,7 @@ const sampleCollections: collection[] = [
     id: 3, 
     name: 'Work', 
     link: '/work', 
-    color: '#3d61e3',
+    color: '#845fa3',
     tasks: [
       {
         id: 1,

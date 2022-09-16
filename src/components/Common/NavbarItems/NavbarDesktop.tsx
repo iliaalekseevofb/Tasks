@@ -6,8 +6,8 @@ import { profileSample } from '../../../assets';
 
 const NavbarDesktop = () => {
   return (
-    <div className='w-full h-full px-5 hidden sm:flex justify-between items-center border-b-2 border-mainBg bg-secondaryBgHover bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20'>
-      <section className='flex items-center text-iconsColor text-base font-semibold'>
+    <div className='w-full h-full px-standardP hidden sm:flex justify-between items-center border-b-2 border-mainBg bg-secondaryBgHover bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20'>
+      <section className='flex items-center text-standardC text-base font-semibold'>
         {/* Menu icon */}
         <button className='w-navItemDesktop h-navItemDesktop mr-3 flex justify-center items-center rounded-standard hover:bg-secondaryBgHover transition-colors duration-200'>
           <FiMenu className='w-iconSizeDesktop h-iconSizeDesktop' />
@@ -29,7 +29,7 @@ const NavbarDesktop = () => {
           <HiOutlinePlusSm className='w-iconSizeDesktop h-iconSizeDesktop text-white' />
         </button>
         {/* Notifications icon */}
-        <button className='w-navItemDesktop h-navItemDesktop mr-3 flex justify-center items-center rounded-standard text-iconsColor hover:bg-secondaryBgHover transition-colors duration-200'>
+        <button className='w-navItemDesktop h-navItemDesktop mr-3 flex justify-center items-center rounded-standard text-standardC hover:bg-secondaryBgHover transition-colors duration-200'>
           <FaRegBell className='w-iconSizeDesktop h-iconSizeDesktop' />
         </button>
         {/* Profile */}

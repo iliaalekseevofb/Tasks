@@ -7,13 +7,14 @@ module.exports = {
       colors: {
         mainBg: '#1e1d26',
         secondaryBg: '#282730',
-        secondaryBgHover: '#494854',
-        iconsColor: '#b4b2c2'
+        secondaryBgHover: '#2b2936',
+        standardC: '#b4b2c2'
       },
       borderRadius: {
-        standard: '0.75rem'
+        standard: '0.5rem'
       },
       spacing: {
+        'standardP': '1.25rem',
         'navItemDesktop': '2rem',
         'navItemMobile': '2.5rem',
         'iconSizeDesktop': '1.5rem',

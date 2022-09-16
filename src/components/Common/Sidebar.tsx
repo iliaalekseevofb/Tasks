@@ -7,13 +7,11 @@ type SidebarProps = {
 const Sidebar = (props: SidebarProps) => {
   return (
     <div className="fixed z-10 top-12 left-0 bottom-0 w-64 h-screen py-6 bg-secondaryBgHover bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20">
+      <h4 className="mb-3 px-standardP text-lg font-bold text-standardC">Collections</h4>
       {props.collections.map((item) => (
-        <div>
-          {item.id}
-          {item.name}
-          {item.tasks.map((task) => (
-            <h3>{task.name}</h3>
-          ))}
+        <div className="w-full py-4 px-standardP flex items-center hover:bg-secondaryBgHover transition-colors duration-200 cursor-pointer">
+          <span className="w-6 h-6 mr-3 rounded-standard" style={{backgroundColor: item.color}} />
+          <h4 className="text-lg font-semibold text-standardC">{item.name}</h4>
         </div>
       ))}
     </div>
