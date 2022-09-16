@@ -9,7 +9,7 @@ const NavbarDesktop = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='w-full h-full px-standardP hidden sm:flex justify-between items-center border-b-4 border-mainBg bg-secondaryBgHover bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20'>
+    <div className='w-full h-full px-standardP hidden sm:flex justify-between items-center border-b-2 border-secondaryBgHover bg-secondaryBgHover bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20'>
       <section className='flex items-center text-standardC text-base font-semibold'>
         {/* Menu icon */}
         <button className='w-navItemDesktop h-navItemDesktop mr-3 flex justify-center items-center rounded-standard hover:bg-secondaryBgHover transition-colors duration-200'>
