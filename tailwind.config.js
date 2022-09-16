@@ -9,6 +9,9 @@ module.exports = {
         secondaryBg: '#282730',
         secondaryBgHover: '#494854',
         iconsColor: '#b4b2c2'
+      },
+      borderRadius: {
+        standard: '0.75rem'
       }
     },
   },
