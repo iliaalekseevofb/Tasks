@@ -12,6 +12,10 @@ module.exports = {
       },
       borderRadius: {
         standard: '0.75rem'
+      },
+      spacing: {
+        'navItem': '2rem',
+        'iconSize': '1.5rem'
       }
     },
   },
