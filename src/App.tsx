@@ -12,6 +12,7 @@ const sampleCollections: collection[] = [
     link: 'school', 
     color: '#cf8cca',
     icon: <FaBookReader />,
+    favorite: false,
     tasks: [
       {
         id: 1,
@@ -26,6 +27,7 @@ const sampleCollections: collection[] = [
     link: 'personal', 
     color: '#6ebac4',
     icon: <FaUser />,
+    favorite: true,
     tasks: [
       {
         id: 1,
@@ -45,6 +47,7 @@ const sampleCollections: collection[] = [
     link: 'design', 
     color: '#845fa3',
     icon: <FaEdit />,
+    favorite: false,
     tasks: [
       {
         id: 1,
@@ -53,6 +56,7 @@ const sampleCollections: collection[] = [
       }
     ]
   },
+  
 ]
 
 const App = () => {
