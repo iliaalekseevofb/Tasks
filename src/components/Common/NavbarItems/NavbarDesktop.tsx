@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { GlobalContext } from '../../../context/GlobalContext';
 import { useNavigate } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 import { RiLayoutMasonryFill } from 'react-icons/ri';
@@ -5,19 +7,15 @@ import { FaRegBell } from 'react-icons/fa';
 import { HiOutlinePlusSm, HiFolderOpen } from 'react-icons/hi';
 import { profileSample } from '../../../assets';
 
-type NavbarDesktopProps = {
-  isOpenSidebar: boolean,
-  setIsOpenSidebar: (params: boolean) => void
-}
-
-const NavbarDesktop = (props: NavbarDesktopProps) => {
+const NavbarDesktop = () => {
   const navigate = useNavigate();
+  const {isOpenSidebar, setIsOpenSidebar} = useContext(GlobalContext);
 
   return (
     <div className='w-full h-full px-standardP hidden sm:flex justify-between items-center border-b-2 border-secondaryBgHover bg-secondaryBgHover bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20'>
       <section className='flex items-center text-standardC text-base font-semibold'>
         {/* Menu icon */}
-        <button onClick={() => {props.setIsOpenSidebar(!props.isOpenSidebar)}} className='w-navItemDesktop h-navItemDesktop mr-3 flex justify-center items-center rounded-standard hover:bg-secondaryBgHover transition-colors duration-200'>
+        <button onClick={() => {setIsOpenSidebar(!isOpenSidebar)}} className='w-navItemDesktop h-navItemDesktop mr-3 flex justify-center items-center rounded-standard hover:bg-secondaryBgHover transition-colors duration-200'>
           <FiMenu className='w-iconSizeDesktop h-iconSizeDesktop' />
         </button>
         {/* Dashboard */}

@@ -1,21 +1,9 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { GlobalContext, collection } from './context/GlobalContext';
 import { Navbar, Sidebar } from "./components";
 import { Dashboard, Collection, Collections, Account, Landing, SignIn, SignUp, Error } from './pages';
 import { FaBookReader, FaUser, FaEdit } from 'react-icons/fa';
-
-export interface collection {
-  id: number, 
-  name: string, 
-  link: string, 
-  color: string,
-  icon: React.ReactNode,
-  tasks: {
-    id: number,
-    name: string,
-    isCompleted: boolean
-  }[]
-}
 
 const sampleCollections: collection[] = [
   {
@@ -69,24 +57,26 @@ const sampleCollections: collection[] = [
 
 const App = () => {
   const[collections, setCollections] = useState<collection[]>(sampleCollections);
-  const[isOpenSideBar, setIsOpenSidebar] = useState<boolean>(true);
+  const[isOpenSidebar, setIsOpenSidebar] = useState<boolean>(true);
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar isOpenSidebar={isOpenSideBar} setIsOpenSidebar={setIsOpenSidebar} />
-        <Sidebar collections={collections} isOpenSidebar={isOpenSideBar} />
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/collections" element={<Collections />} />
-          <Route path="/collections/:name" element={<Collection />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/landing" element={<Landing />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="*" element={<Error />} />
-         </Routes>
-      </BrowserRouter>
+      <GlobalContext.Provider value={{collections, setCollections, isOpenSidebar, setIsOpenSidebar}}>
+        <BrowserRouter>
+          <Navbar />
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/collections" element={<Collections />} />
+            <Route path="/collections/:name" element={<Collection />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/landing" element={<Landing />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </BrowserRouter>
+      </GlobalContext.Provider>
     </div>
   )
 }
