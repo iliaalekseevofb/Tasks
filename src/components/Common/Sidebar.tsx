@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { collection, GlobalContext } from '../../context/GlobalContext';
+import { GlobalContext } from '../../context/GlobalContext';
 import { Link } from 'react-router-dom';
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 
@@ -10,8 +10,8 @@ const Sidebar = () => {
     <div className={`fixed z-10 top-14 left-0 bottom-0 w-64 h-screen py-6 overflow-auto ${isOpenSidebar ? '-translate-x-full sm:translate-x-0' : '-translate-x-full'} ease-in-out duration-200 border-r-2 border-secondaryBgHover bg-secondaryBgHover bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20`}>
       <h4 className="mb-3 px-standardP text-lg font-bold text-standardC">Collections</h4>
       {collections.map((item) => (
-        <div className='group relative w-full hover:bg-secondaryBgHover transition-colors duration-200 cursor-pointer'>
-          <Link key={item.id} className='w-full py-4 px-standardP flex items-center' to={`collections/${item.link}`}>
+        <div key={item.id} className='group relative w-full hover:bg-secondaryBgHover transition-colors duration-200 cursor-pointer'>
+          <Link className='w-full py-4 px-standardP flex items-center' to={`collections/${item.link}`}>
             <div className="w-navItemDesktop h-navItemDesktop mr-3 flex justify-center items-center rounded-standard text-white" style={{backgroundColor: item.color}}>
               {item.icon}
             </div>
