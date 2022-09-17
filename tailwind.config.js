@@ -8,6 +8,7 @@ module.exports = {
         mainBg: '#1e1d26',
         secondaryBg: '#282730',
         secondaryBgHover: '#2b2936',
+        secondaryBgHoverHover: '#333140',
         standardC: '#b4b2c2'
       },
       borderRadius: {
