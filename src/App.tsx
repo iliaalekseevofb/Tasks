@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar, Sidebar } from "./components";
-import { Dashboard, Collection, Collections, Account, Landing, SignIn, SignUp } from './pages';
-import { FiMenu } from 'react-icons/fi';
+import { Dashboard, Collection, Collections, Account, Landing, SignIn, SignUp, Error } from './pages';
 import { FaBookReader, FaUser, FaEdit } from 'react-icons/fa';
 
 export interface collection {
@@ -80,12 +79,13 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/collections" element={<Collections />} />
-          <Route path="/collection-:name" element={<Collection />} />
+          <Route path="/collections/:name" element={<Collection />} />
           <Route path="/account" element={<Account />} />
           <Route path="/landing" element={<Landing />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-        </Routes>
+          <Route path="*" element={<Error />} />
+         </Routes>
       </BrowserRouter>
     </div>
   )
