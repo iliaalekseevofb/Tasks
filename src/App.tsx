@@ -56,7 +56,6 @@ const sampleCollections: collection[] = [
       }
     ]
   },
-  
 ]
 
 const App = () => {
