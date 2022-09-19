@@ -7,6 +7,7 @@ export interface collection {
   color: string,
   icon: React.ReactNode,
   favorite: boolean,
+  expanded: boolean,
   tasks: {
     id: number,
     name: string,

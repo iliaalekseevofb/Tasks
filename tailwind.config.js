@@ -9,10 +9,12 @@ module.exports = {
         secondaryBg: '#282730',
         secondaryBgHover: '#2b2936',
         secondaryBgHoverHover: '#333140',
-        standardC: '#b4b2c2'
+        standardC: '#b4b2c2',
+        collectionCardBg: '#21202b',
+        collectionCardBgHeader: '#272633'
       },
       borderRadius: {
-        standard: '0.5rem'
+        standard: '0.75rem'
       },
       spacing: {
         'standardP': '1.25rem',

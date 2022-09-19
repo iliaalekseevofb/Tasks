@@ -13,10 +13,16 @@ const sampleCollections: collection[] = [
     color: '#cf8cca',
     icon: <FaBookReader />,
     favorite: false,
+    expanded: true,
     tasks: [
       {
         id: 1,
         name: 'Prepare for the exams',
+        isCompleted: false
+      },
+      {
+        id: 2,
+        name: 'Complete my homework',
         isCompleted: false
       }
     ]
@@ -28,6 +34,7 @@ const sampleCollections: collection[] = [
     color: '#6ebac4',
     icon: <FaUser />,
     favorite: true,
+    expanded: false,
     tasks: [
       {
         id: 1,
@@ -37,6 +44,11 @@ const sampleCollections: collection[] = [
       {
         id: 2,
         name: 'Meet the Jerry on Sunday',
+        isCompleted: false
+      },
+      {
+        id: 3,
+        name: 'Help my mom with gardening',
         isCompleted: false
       }
     ]
@@ -48,6 +60,7 @@ const sampleCollections: collection[] = [
     color: '#845fa3',
     icon: <FaEdit />,
     favorite: false,
+    expanded: false,
     tasks: [
       {
         id: 1,
