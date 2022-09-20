@@ -19,9 +19,17 @@ const Dashboard = () => {
           </button>
         </div>
         {collections.map((item) => (
-          <div className='w-full mt-8 rounded-standard overflow-hidden'>
-            <div className='w-full h-16 bg-collectionCardBgHeader'>
+          <div key={item.id} className='w-full mt-8 rounded-standard overflow-hidden'>
+            <div className='w-full h-16 px-4 flex justify-between items-center bg-collectionCardBgHeader'>
+              <div className='flex items-center'>
+                <span className="w-navItemDesktop h-navItemDesktop mr-3 flex justify-center items-center rounded-standard text-white" style={{backgroundColor: item.color}}>
+                  {item.icon}
+                </span>
+                <h5 className='text-xl text-white font-semibold'>{item.name}</h5>
+              </div>
+              <button>
 
+              </button>
             </div>
             <div className='w-full h-32 bg-collectionCardBg'>
 
